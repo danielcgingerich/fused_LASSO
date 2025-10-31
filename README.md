@@ -1,2 +1,2 @@
 # fused LASSO using alternating direction method of multipliers (ADMM)
-Few R packages exist with flexible implementations of the fused LASSO. Here, I showcase my implementation of the fused LASSO for discovering differential partial correlations. Specifically, given a response $Y = [Y_1, Y_2]^T$ and a matrix of predictors $X$, w
+Few R packages exist with flexible implementations of the fused LASSO. Here, I showcase my implementation of the fused LASSO for discovering differential partial correlations. For example, consider the gene expression of treatment (1) versus control (0) groups. Here, we have a response matrix $Y = [Y_1, Y_0]$. The design matrix is $\text{BlockDiag}(X_1, X_2)$
