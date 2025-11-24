@@ -1,8 +1,8 @@
 cond <- grepl('/hpc', getwd())
 if (cond){
-  source('/hpc/group/adrc/dcg27/african_american_multiome/scripts/config.R')
+  source('/path/to/config.R')
 } else {
-  source('C:/Users/danie/Desktop/african_american_multiome/scripts/config.R')
+  source('/path/to/config.R')
 } ; rm(cond)
 set.seed(1)
 
@@ -277,4 +277,5 @@ for (i in 1:length(genes)){
 
 setwd(apoe_ccre_objects)
 saveRDS(RESULTS, paste0('4.fused_lasso___', chr, '.rds'))
+
 
