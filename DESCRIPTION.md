@@ -61,7 +61,7 @@ Where $\text{S}(x, t)$ is the soft threshold operator:
 
 $$ \text{S} (x, t) = \text{sign} (x) \cdot \max ( |x| - t, 0 ) $$
 
-The threshold, $t_j = \lambda_j / \rho_j $ is based on the Karush-Kuhn-Tucker conditions of the augmented Lagrangian (see appendix for details). 
+The threshold,  $t_j = \lambda_j / \rho_j$ is based on the Karush-Kuhn-Tucker conditions of the augmented Lagrangian (see appendix for details). 
 
 *Update* $u$ *and* $w$ &mdash; $u$ and $w$ are updated as follows: 
 
