@@ -1,17 +1,6 @@
-\documentclass{article}
-\usepackage{amsfonts}
-\usepackage{amsmath}
+### Fused LASSO using alternating direction method of multipliers (ADMM)
 
-
-\title{Fused LASSO using alternating direction method of multipliers (ADMM)}
-\author{Dan Gingerich}
-\date{}
-
-\begin{document}
-
-\maketitle
-
-\section*{Introduction}
+\section{Introduction}
 Few R packages exist with flexible implementations of the fused LASSO. Here, I showcase my implementation of the fused LASSO for discovering differential partial correlations. For example, consider the gene expression of treatment $(1)$ versus control $(0)$ groups. Here, we have a response vector
 $Y=[Y_1,Y_0]$. The design matrix is $X =  \text{BlockDiag}(X_1, X_0) $. In this setting, we essentially run two separate regressions, as the beta coefficients are paired yet unconstrained. The fused LASSO imposes both a penalty on the beta coefficients, and the differences between beta coefficients of corresponding variables. 
 
