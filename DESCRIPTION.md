@@ -6,10 +6,13 @@ $Y=[Y_1,Y_0]$. The design matrix is $X =  \text{BlockDiag}(X_1, X_0) $. In this 
 ### Objective function
 In many biological applications, we are interested in the association of a response variable $Y \in \mathbb{R}^{N \times 1}$, with respect to some predictor variables $X \in \mathbb{R}^{N \times p}$, across varying conditions. In the simple 2-condition scenario, we have the following model:
 $$Y = X \beta + \varepsilon $$
+
 $$ \varepsilon \sim \text{N}(0, \sigma^2) $$
+
 $$ Y = [Y_1, Y_0]^T $$
+
 $$ X = \text{BlockDiag}(X_1, X_0) $$
-\\
+
 To choose relevant predictor variables, we can impose an L1 penalty on the beta coefficient vector, $\beta$. Additionally, when we expect the relationship between the predictors and response to be mostly the same across groups, it is useful to impose a penalty on the beta coefficients of paired coefficients, $\beta_j$ and $\beta_{j+p}$, between treatment and control groups, respectively. We then minimize: 
 $$ \frac{1}{2N} || Y - X \beta ||_2^2 + \lambda_1 || \beta ||_1 + \lambda_2 || D \beta ||_1 $$
 However, because there are multiple nondifferentiable L1 penalty factors, the objective function cannot be optimized using standard gradient based methods. To efficiently solve the optimization, we introduce two auxiliary variables, $z$ and $d$, in place of $\beta$ and $D \beta$:
